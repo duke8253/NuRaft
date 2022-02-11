@@ -1,6 +1,10 @@
 cmake_minimum_required(VERSION 3.5)
 project(NuRaft VERSION 1.0.0 LANGUAGES CXX)
 
+INCLUDE(CMakeForceCompiler)
+CMAKE_FORCE_C_COMPILER(gcc GNU)
+CMAKE_FORCE_CXX_COMPILER(g++ GNU)
+
 # === Build type (default: RelWithDebInfo, O2) ===========
 if (NOT CMAKE_BUILD_TYPE)
     set(DEFAULT_BUILD_TYPE "RelWithDebInfo")
